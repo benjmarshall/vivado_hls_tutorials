@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Fri Jun  9 05:55:23 2017
+# Process ID: 6497
+# Current directory: /mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/lesson_1_proj/solution1/impl/verilog
+# Command line: vivado -notrace -mode batch -source run_vivado.tcl
+# Log file: /mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/lesson_1_proj/solution1/impl/verilog/vivado.log
+# Journal file: /mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/lesson_1_proj/solution1/impl/verilog/vivado.jou
+#-----------------------------------------------------------
+source run_vivado.tcl -notrace

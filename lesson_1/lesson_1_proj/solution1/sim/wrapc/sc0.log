@@ -1,0 +1,5 @@
+   Build using "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_simple_adder.cpp
+   Compiling testbench.cpp_pre.cpp.tb.cpp
+   Compiling dut.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

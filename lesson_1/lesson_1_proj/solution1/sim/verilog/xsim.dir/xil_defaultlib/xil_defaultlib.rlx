@@ -1,0 +1,6 @@
+0.6
+2017.1
+Apr 14 2017
+18:58:24
+/mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/lesson_1_proj/solution1/sim/verilog/simple_adder.autotb.v,1496984493,systemVerilog,,,,apatb_simple_adder_top,/opt/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed,,,,,,
+/mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/lesson_1_proj/solution1/sim/verilog/simple_adder.v,1496984098,systemVerilog,,,,simple_adder,/opt/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed,,,,,,

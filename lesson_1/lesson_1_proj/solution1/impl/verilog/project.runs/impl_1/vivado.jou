@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Fri Jun  9 05:56:37 2017
+# Process ID: 6795
+# Current directory: /mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/lesson_1_proj/solution1/impl/verilog/project.runs/impl_1
+# Command line: vivado -log simple_adder.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source simple_adder.tcl -notrace
+# Log file: /mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/lesson_1_proj/solution1/impl/verilog/project.runs/impl_1/simple_adder.vdi
+# Journal file: /mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/lesson_1_proj/solution1/impl/verilog/project.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source simple_adder.tcl -notrace

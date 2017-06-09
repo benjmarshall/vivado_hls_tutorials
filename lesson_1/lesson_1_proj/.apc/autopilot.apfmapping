@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="dut.h" path="/mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/source/dut.h"/>
+    <originFiles name="dut.cpp" path="/mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/source/dut.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/mnt/centos_share/Vivado_Tutorials/vivado_hls_tutorials/lesson_1/tb/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

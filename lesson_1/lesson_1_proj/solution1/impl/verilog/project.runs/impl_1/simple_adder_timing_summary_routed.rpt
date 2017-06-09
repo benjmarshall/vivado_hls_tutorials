@@ -1,0 +1,706 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Fri Jun  9 05:57:47 2017
+| Host         : localhost.localdomain running 64-bit CentOS Linux release 7.2.1511 (Core)
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file simple_adder_timing_summary_routed.rpt -rpx simple_adder_timing_summary_routed.rpx
+| Design       : simple_adder
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 65 input ports with partial input delay specified. (HIGH)
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      6.353        0.000                      0                   34           NA           NA                     NA                   NA           NA           NA                      NA                    NA  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group        From Clock        To Clock              WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------        ----------        --------              -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**default**       input port clock                          6.353        0.000                      0                   34                                                                        
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **default**
+From Clock:  input port clock
+  To Clock:  
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.353ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.353ns  (required time - arrival time)
+  Source:                 a[1]
+                            (input port)
+  Destination:            ap_return[29]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.647ns  (logic 1.692ns (46.394%)  route 1.955ns (53.606%))
+  Logic Levels:           9  (CARRY4=8 LUT2=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[1] (IN)
+                         net (fo=0)                   0.973     0.973    a[1]
+    SLICE_X56Y71         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  ap_return[0]_INST_0_i_3/O
+                         net (fo=1, routed)           0.000     1.097    ap_return[0]_INST_0_i_3_n_0
+    SLICE_X56Y71         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     1.647 r  ap_return[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.647    ap_return[0]_INST_0_n_0
+    SLICE_X56Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.761 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.761    ap_return[4]_INST_0_n_0
+    SLICE_X56Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.875 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.875    ap_return[8]_INST_0_n_0
+    SLICE_X56Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.989 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, routed)           0.009     1.998    ap_return[12]_INST_0_n_0
+    SLICE_X56Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.112 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.112    ap_return[16]_INST_0_n_0
+    SLICE_X56Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.226 r  ap_return[20]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.226    ap_return[20]_INST_0_n_0
+    SLICE_X56Y77         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.340 r  ap_return[24]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.340    ap_return[24]_INST_0_n_0
+    SLICE_X56Y78         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     2.674 r  ap_return[28]_INST_0/O[1]
+                         net (fo=0)                   0.973     3.647    ap_return[29]
+                                                                      r  ap_return[29] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.647    
+  -------------------------------------------------------------------
+                         slack                                  6.353    
+
+Slack (MET) :             6.374ns  (required time - arrival time)
+  Source:                 a[1]
+                            (input port)
+  Destination:            ap_return[31]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.626ns  (logic 1.671ns (46.084%)  route 1.955ns (53.916%))
+  Logic Levels:           9  (CARRY4=8 LUT2=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[1] (IN)
+                         net (fo=0)                   0.973     0.973    a[1]
+    SLICE_X56Y71         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  ap_return[0]_INST_0_i_3/O
+                         net (fo=1, routed)           0.000     1.097    ap_return[0]_INST_0_i_3_n_0
+    SLICE_X56Y71         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     1.647 r  ap_return[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.647    ap_return[0]_INST_0_n_0
+    SLICE_X56Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.761 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.761    ap_return[4]_INST_0_n_0
+    SLICE_X56Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.875 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.875    ap_return[8]_INST_0_n_0
+    SLICE_X56Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.989 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, routed)           0.009     1.998    ap_return[12]_INST_0_n_0
+    SLICE_X56Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.112 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.112    ap_return[16]_INST_0_n_0
+    SLICE_X56Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.226 r  ap_return[20]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.226    ap_return[20]_INST_0_n_0
+    SLICE_X56Y77         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.340 r  ap_return[24]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.340    ap_return[24]_INST_0_n_0
+    SLICE_X56Y78         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.653 r  ap_return[28]_INST_0/O[3]
+                         net (fo=0)                   0.973     3.626    ap_return[31]
+                                                                      r  ap_return[31] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.626    
+  -------------------------------------------------------------------
+                         slack                                  6.374    
+
+Slack (MET) :             6.448ns  (required time - arrival time)
+  Source:                 a[1]
+                            (input port)
+  Destination:            ap_return[30]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.552ns  (logic 1.597ns (44.960%)  route 1.955ns (55.040%))
+  Logic Levels:           9  (CARRY4=8 LUT2=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[1] (IN)
+                         net (fo=0)                   0.973     0.973    a[1]
+    SLICE_X56Y71         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  ap_return[0]_INST_0_i_3/O
+                         net (fo=1, routed)           0.000     1.097    ap_return[0]_INST_0_i_3_n_0
+    SLICE_X56Y71         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     1.647 r  ap_return[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.647    ap_return[0]_INST_0_n_0
+    SLICE_X56Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.761 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.761    ap_return[4]_INST_0_n_0
+    SLICE_X56Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.875 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.875    ap_return[8]_INST_0_n_0
+    SLICE_X56Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.989 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, routed)           0.009     1.998    ap_return[12]_INST_0_n_0
+    SLICE_X56Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.112 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.112    ap_return[16]_INST_0_n_0
+    SLICE_X56Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.226 r  ap_return[20]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.226    ap_return[20]_INST_0_n_0
+    SLICE_X56Y77         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.340 r  ap_return[24]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.340    ap_return[24]_INST_0_n_0
+    SLICE_X56Y78         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.579 r  ap_return[28]_INST_0/O[2]
+                         net (fo=0)                   0.973     3.552    ap_return[30]
+                                                                      r  ap_return[30] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.552    
+  -------------------------------------------------------------------
+                         slack                                  6.448    
+
+Slack (MET) :             6.465ns  (required time - arrival time)
+  Source:                 a[1]
+                            (input port)
+  Destination:            ap_return[28]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.535ns  (logic 1.580ns (44.696%)  route 1.955ns (55.304%))
+  Logic Levels:           9  (CARRY4=8 LUT2=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[1] (IN)
+                         net (fo=0)                   0.973     0.973    a[1]
+    SLICE_X56Y71         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  ap_return[0]_INST_0_i_3/O
+                         net (fo=1, routed)           0.000     1.097    ap_return[0]_INST_0_i_3_n_0
+    SLICE_X56Y71         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     1.647 r  ap_return[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.647    ap_return[0]_INST_0_n_0
+    SLICE_X56Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.761 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.761    ap_return[4]_INST_0_n_0
+    SLICE_X56Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.875 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.875    ap_return[8]_INST_0_n_0
+    SLICE_X56Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.989 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, routed)           0.009     1.998    ap_return[12]_INST_0_n_0
+    SLICE_X56Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.112 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.112    ap_return[16]_INST_0_n_0
+    SLICE_X56Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.226 r  ap_return[20]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.226    ap_return[20]_INST_0_n_0
+    SLICE_X56Y77         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.340 r  ap_return[24]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.340    ap_return[24]_INST_0_n_0
+    SLICE_X56Y78         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     2.562 r  ap_return[28]_INST_0/O[0]
+                         net (fo=0)                   0.973     3.535    ap_return[28]
+                                                                      r  ap_return[28] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.535    
+  -------------------------------------------------------------------
+                         slack                                  6.465    
+
+Slack (MET) :             6.467ns  (required time - arrival time)
+  Source:                 a[1]
+                            (input port)
+  Destination:            ap_return[25]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.533ns  (logic 1.578ns (44.664%)  route 1.955ns (55.336%))
+  Logic Levels:           8  (CARRY4=7 LUT2=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[1] (IN)
+                         net (fo=0)                   0.973     0.973    a[1]
+    SLICE_X56Y71         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  ap_return[0]_INST_0_i_3/O
+                         net (fo=1, routed)           0.000     1.097    ap_return[0]_INST_0_i_3_n_0
+    SLICE_X56Y71         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     1.647 r  ap_return[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.647    ap_return[0]_INST_0_n_0
+    SLICE_X56Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.761 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.761    ap_return[4]_INST_0_n_0
+    SLICE_X56Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.875 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.875    ap_return[8]_INST_0_n_0
+    SLICE_X56Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.989 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, routed)           0.009     1.998    ap_return[12]_INST_0_n_0
+    SLICE_X56Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.112 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.112    ap_return[16]_INST_0_n_0
+    SLICE_X56Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.226 r  ap_return[20]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.226    ap_return[20]_INST_0_n_0
+    SLICE_X56Y77         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     2.560 r  ap_return[24]_INST_0/O[1]
+                         net (fo=0)                   0.973     3.533    ap_return[25]
+                                                                      r  ap_return[25] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.533    
+  -------------------------------------------------------------------
+                         slack                                  6.467    
+
+Slack (MET) :             6.488ns  (required time - arrival time)
+  Source:                 a[1]
+                            (input port)
+  Destination:            ap_return[27]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.512ns  (logic 1.557ns (44.334%)  route 1.955ns (55.666%))
+  Logic Levels:           8  (CARRY4=7 LUT2=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[1] (IN)
+                         net (fo=0)                   0.973     0.973    a[1]
+    SLICE_X56Y71         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  ap_return[0]_INST_0_i_3/O
+                         net (fo=1, routed)           0.000     1.097    ap_return[0]_INST_0_i_3_n_0
+    SLICE_X56Y71         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     1.647 r  ap_return[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.647    ap_return[0]_INST_0_n_0
+    SLICE_X56Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.761 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.761    ap_return[4]_INST_0_n_0
+    SLICE_X56Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.875 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.875    ap_return[8]_INST_0_n_0
+    SLICE_X56Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.989 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, routed)           0.009     1.998    ap_return[12]_INST_0_n_0
+    SLICE_X56Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.112 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.112    ap_return[16]_INST_0_n_0
+    SLICE_X56Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.226 r  ap_return[20]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.226    ap_return[20]_INST_0_n_0
+    SLICE_X56Y77         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.539 r  ap_return[24]_INST_0/O[3]
+                         net (fo=0)                   0.973     3.512    ap_return[27]
+                                                                      r  ap_return[27] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.512    
+  -------------------------------------------------------------------
+                         slack                                  6.488    
+
+Slack (MET) :             6.562ns  (required time - arrival time)
+  Source:                 a[1]
+                            (input port)
+  Destination:            ap_return[26]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.438ns  (logic 1.483ns (43.135%)  route 1.955ns (56.865%))
+  Logic Levels:           8  (CARRY4=7 LUT2=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[1] (IN)
+                         net (fo=0)                   0.973     0.973    a[1]
+    SLICE_X56Y71         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  ap_return[0]_INST_0_i_3/O
+                         net (fo=1, routed)           0.000     1.097    ap_return[0]_INST_0_i_3_n_0
+    SLICE_X56Y71         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     1.647 r  ap_return[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.647    ap_return[0]_INST_0_n_0
+    SLICE_X56Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.761 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.761    ap_return[4]_INST_0_n_0
+    SLICE_X56Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.875 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.875    ap_return[8]_INST_0_n_0
+    SLICE_X56Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.989 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, routed)           0.009     1.998    ap_return[12]_INST_0_n_0
+    SLICE_X56Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.112 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.112    ap_return[16]_INST_0_n_0
+    SLICE_X56Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.226 r  ap_return[20]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.226    ap_return[20]_INST_0_n_0
+    SLICE_X56Y77         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.465 r  ap_return[24]_INST_0/O[2]
+                         net (fo=0)                   0.973     3.438    ap_return[26]
+                                                                      r  ap_return[26] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.438    
+  -------------------------------------------------------------------
+                         slack                                  6.562    
+
+Slack (MET) :             6.579ns  (required time - arrival time)
+  Source:                 a[1]
+                            (input port)
+  Destination:            ap_return[24]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.421ns  (logic 1.466ns (42.853%)  route 1.955ns (57.147%))
+  Logic Levels:           8  (CARRY4=7 LUT2=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[1] (IN)
+                         net (fo=0)                   0.973     0.973    a[1]
+    SLICE_X56Y71         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  ap_return[0]_INST_0_i_3/O
+                         net (fo=1, routed)           0.000     1.097    ap_return[0]_INST_0_i_3_n_0
+    SLICE_X56Y71         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     1.647 r  ap_return[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.647    ap_return[0]_INST_0_n_0
+    SLICE_X56Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.761 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.761    ap_return[4]_INST_0_n_0
+    SLICE_X56Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.875 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.875    ap_return[8]_INST_0_n_0
+    SLICE_X56Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.989 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, routed)           0.009     1.998    ap_return[12]_INST_0_n_0
+    SLICE_X56Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.112 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.112    ap_return[16]_INST_0_n_0
+    SLICE_X56Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.226 r  ap_return[20]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.226    ap_return[20]_INST_0_n_0
+    SLICE_X56Y77         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     2.448 r  ap_return[24]_INST_0/O[0]
+                         net (fo=0)                   0.973     3.421    ap_return[24]
+                                                                      r  ap_return[24] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.421    
+  -------------------------------------------------------------------
+                         slack                                  6.579    
+
+Slack (MET) :             6.581ns  (required time - arrival time)
+  Source:                 a[1]
+                            (input port)
+  Destination:            ap_return[21]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.419ns  (logic 1.464ns (42.819%)  route 1.955ns (57.181%))
+  Logic Levels:           7  (CARRY4=6 LUT2=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[1] (IN)
+                         net (fo=0)                   0.973     0.973    a[1]
+    SLICE_X56Y71         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  ap_return[0]_INST_0_i_3/O
+                         net (fo=1, routed)           0.000     1.097    ap_return[0]_INST_0_i_3_n_0
+    SLICE_X56Y71         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     1.647 r  ap_return[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.647    ap_return[0]_INST_0_n_0
+    SLICE_X56Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.761 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.761    ap_return[4]_INST_0_n_0
+    SLICE_X56Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.875 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.875    ap_return[8]_INST_0_n_0
+    SLICE_X56Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.989 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, routed)           0.009     1.998    ap_return[12]_INST_0_n_0
+    SLICE_X56Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.112 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.112    ap_return[16]_INST_0_n_0
+    SLICE_X56Y76         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     2.446 r  ap_return[20]_INST_0/O[1]
+                         net (fo=0)                   0.973     3.419    ap_return[21]
+                                                                      r  ap_return[21] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.419    
+  -------------------------------------------------------------------
+                         slack                                  6.581    
+
+Slack (MET) :             6.602ns  (required time - arrival time)
+  Source:                 a[1]
+                            (input port)
+  Destination:            ap_return[23]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (MaxDelay Path 10.000ns)
+  Data Path Delay:        3.398ns  (logic 1.443ns (42.466%)  route 1.955ns (57.534%))
+  Logic Levels:           7  (CARRY4=6 LUT2=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 10.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[1] (IN)
+                         net (fo=0)                   0.973     0.973    a[1]
+    SLICE_X56Y71         LUT2 (Prop_lut2_I1_O)        0.124     1.097 r  ap_return[0]_INST_0_i_3/O
+                         net (fo=1, routed)           0.000     1.097    ap_return[0]_INST_0_i_3_n_0
+    SLICE_X56Y71         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     1.647 r  ap_return[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.647    ap_return[0]_INST_0_n_0
+    SLICE_X56Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.761 r  ap_return[4]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.761    ap_return[4]_INST_0_n_0
+    SLICE_X56Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.875 r  ap_return[8]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     1.875    ap_return[8]_INST_0_n_0
+    SLICE_X56Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.989 r  ap_return[12]_INST_0/CO[3]
+                         net (fo=1, routed)           0.009     1.998    ap_return[12]_INST_0_n_0
+    SLICE_X56Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.112 r  ap_return[16]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     2.112    ap_return[16]_INST_0_n_0
+    SLICE_X56Y76         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.425 r  ap_return[20]_INST_0/O[3]
+                         net (fo=0)                   0.973     3.398    ap_return[23]
+                                                                      r  ap_return[23] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   10.000    10.000    
+                         clock pessimism              0.000    10.000    
+                         output delay                -0.000    10.000    
+  -------------------------------------------------------------------
+                         required time                         10.000    
+                         arrival time                          -3.398    
+  -------------------------------------------------------------------
+                         slack                                  6.602    
+
+
+
+
+
